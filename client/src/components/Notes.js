@@ -102,7 +102,7 @@ const Notes = (props) => {
                     id="description"
                     name="description"
                     onChange={onChange}
-                    value={note.content}
+                    value={note.description}
                     required
                     minLength={1}
                     maxLength={1000}

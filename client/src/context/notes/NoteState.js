@@ -45,7 +45,10 @@ const NoteState = (props) => {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: note.title, content: note.content }),
+      body: JSON.stringify({
+        title: note.title,
+        description: note.description,
+      }),
     });
     await response.json();
     getNotes();
