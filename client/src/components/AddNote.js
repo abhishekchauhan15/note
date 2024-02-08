@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { scryRenderedDOMComponentsWithTag } from "react-dom/test-utils";
 import noteContext from "../context/notes/noteContext";
 
 const AddNote = (props) => {
@@ -64,7 +63,6 @@ const AddNote = (props) => {
             maxLength={1000}
           />
         </div>
-
         <button type="button" className="btn btn-primary" onClick={handleClick}>
           Add Note
         </button>

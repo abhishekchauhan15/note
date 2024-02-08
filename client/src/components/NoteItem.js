@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import noteContext from "../context/notes/noteContext";
 
 const NoteItem = (props) => {
-  const { note, openUpdateNoteModal, openReadMoreModal, showAlert } = props; //destructuring
+  const { note, openUpdateNoteModal, openReadMoreModal, showAlert } = props;
 
   const context = useContext(noteContext);
-  const { deleteNote } = context; //destructuring
+  const { deleteNote } = context;
 
   return (
     <div className="col-md-3">

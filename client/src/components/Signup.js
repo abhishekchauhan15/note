@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const serverApi =
-  process.env.REACT_APP_SERVER_API || "http://localhost:5000/api"; // Updated server port
+  process.env.REACT_APP_SERVER_API || "http://localhost:5000/api";
 
 const Signup = (props) => {
   const { showAlert } = props;
@@ -31,7 +31,6 @@ const Signup = (props) => {
         console.log("Submitting user:", user);
         console.log("API URL:", serverApi);
         const response = await fetch(`${serverApi}/register`, {
-          // Updated endpoint URL
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +38,7 @@ const Signup = (props) => {
           body: JSON.stringify({
             username: user.email,
             password: user.password,
-          }), // Adjusted request body
+          }),
         });
         if (response.ok) {
           showAlert("Account created successfully", "success");
