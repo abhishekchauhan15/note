@@ -21,7 +21,7 @@ const Notes = (props) => {
 
   const [note, setNote] = useState({
     title: "",
-    content: "",
+    description: "",
   });
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
