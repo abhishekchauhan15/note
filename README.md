@@ -54,6 +54,55 @@ The database schema for this application consists of three tables:
 | content     | TEXT            | Note Content             |
 | created_at  | TIMESTAMP       | Creation Timestamp (Default: Current Timestamp) |
 
+# APIs
+
+## Authentication
+
+### Register User
+
+- Endpoint: `/api/auth/register`
+- Method: POST
+- Description: Register a new user
+
+### Login User
+
+- Endpoint: `/api/auth/login`
+- Method: POST
+- Description: Log in an existing user
+
+## Notes
+
+### Get All Notes
+
+- Endpoint: `/api/notes`
+- Method: GET
+- Description: Get all notes for the authenticated user
+
+### Add Note
+
+- Endpoint: `/api/notes`
+- Method: POST
+- Description: Add a new note for the authenticated user
+
+### Update Note
+
+- Endpoint: `/api/notes/:id`
+- Method: PUT
+- Description: Update an existing note for the authenticated user
+
+### Delete Note
+
+- Endpoint: `/api/notes/:id`
+- Method: DELETE
+- Description: Delete an existing note for the authenticated user
+
+### Get Previous Note Version
+
+- Endpoint: `/api/previousNote/:id`
+- Method: GET
+- Description: Get the previous version of a note
+
+
 
 ## Technologies Used
 
