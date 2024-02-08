@@ -5,7 +5,7 @@ const {
   updateNote,
   deleteNote,
 } = require("../controllers/noteController");
-const authenticateUser = require("../middlewares/authenticateUser");
+const authenticateUser = require("../middleware/authenticateUser");
 
 const router = express.Router();
 
