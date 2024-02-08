@@ -49,7 +49,7 @@ const Login = (props) => {
 
   return (
     <div>
-      <h1 className="mt-3">Log In to your Cloud Notebook account</h1>
+      <h1 className="mt-3">Log In to your account</h1>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-3">
           <label htmlFor="username" className="form-label">

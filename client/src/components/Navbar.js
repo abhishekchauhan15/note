@@ -23,7 +23,7 @@ const Navbar = ({ showAlert }) => {
           />
         </Link>
         <Link className="navbar-brand" to="/">
-          Cloud Notebook
+          Notes
         </Link>
         <button
           className="navbar-toggler"
