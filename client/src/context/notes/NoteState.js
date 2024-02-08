@@ -66,9 +66,31 @@ const NoteState = (props) => {
     getNotes();
   };
 
+
+  // Fetch the previous version of a note
+  const fetchPreviousVersion = async (note_id) => {
+    console.log("finding prev version for", note_id)
+    const url = `${host}/previousNote/${note_id}`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await response.json();
+    return data;
+  };
+
   return (
     <noteContext.Provider
-      value={{ notes, addNote, editNote, deleteNote, getNotes }}
+      value={{
+        notes,
+        addNote,
+        editNote,
+        deleteNote,
+        getNotes,
+        fetchPreviousVersion,
+      }}
     >
       {props.children}
     </noteContext.Provider>
